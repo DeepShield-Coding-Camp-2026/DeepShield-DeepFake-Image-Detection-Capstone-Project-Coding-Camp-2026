@@ -1,2 +1,122 @@
-# DeepShield-DeepFake-Image-Detection-Capstone-Project-Coding-Camp-2026
-DeepShield is a web-based deepfake detection system built to accurately classify real vs. AI-generated images. Powered by TensorFlow, React.js, and Node.js , it provides clear confidence scores to help users combat digital misinformation and verify visual content seamlessly.
+# DeepShield
+
+## Tentang Proyek
+**DeepShield** adalah aplikasi web berbasis AI yang dirancang untuk mendeteksi keaslian gambar wajah dan mengklasifikasikannya ke dalam dua kategori: **Real** atau **Fake**. Sistem mendukung unggahan gambar dalam format **JPG**, **PNG**, dan **WEBP**, serta menghasilkan informasi berupa **hasil prediksi**, **tingkat kepercayaan (confidence score)**, dan **penjelasan singkat** yang dihasilkan oleh model **Generative AI** untuk membantu pengguna memahami hasil analisis.
+
+Proyek ini dikembangkan sebagai bagian dari **Capstone Project Coding Camp Powered by DBS Foundation 2026**. DeepShield bertujuan untuk meningkatkan kewaspadaan terhadap potensi manipulasi gambar digital, sekaligus mendukung media, komunitas, dan layanan publik sebagai mekanisme verifikasi awal dalam menghadapi penyebaran informasi yang tidak valid di era digital.
+
+## Fitur Utama
+- Login dan Register User
+- Upload Gambar Wajah
+- Deteksi Deepfake Berbasis AI
+- Riwayat Hasil Scan
+- Download Laporan PDF
+- JWT Authentication
+- RESTful API
+
+## Tech Stack
+Frontend:
+- React.js
+- Vite
+- React Router DOM
+- CSS3
+
+Backend:
+- Node.js
+- Express.js
+- JWT Authentication
+- Multer
+- MySQL
+
+AI:
+- FastAPI
+- TensorFlow/Keras
+- Groq API
+- Uvicorn
+
+## Cara Menjalankan Proyek
+
+### Prasyarat
+- [git](https://git-scm.com/install/)
+
+Fullstack:
+- [npm](https://nodejs.org/en/download)
+- [MySQL](https://www.mysql.com/downloads/)
+
+AI:
+- [Python](https://www.python.org/downloads/) 3.10+
+- API Key dari [Groq](https://console.groq.com) untuk generative AI
+
+### 1. Clone Repositori
+
+```bash
+git clone https://github.com/PeterTaniwan/DeepShield-DeepFake-Image-Detection-Capstone-Project-Coding-Camp-2026.git
+cd DeepShield-DeepFake-Image-Detection-Capstone-Project-Coding-Camp-2026
+```
+
+### 2. Konfigurasi Frontend
+
+```bash
+# 1. Pindah ke direktori proyek
+cd ../Frontend_Project
+
+# 2. Instalasi
+npm install
+
+# 3. Jalankan server
+npm run dev
+```
+
+### 3. Konfigurasi Backend
+
+```bash
+# 1. Pindah ke direktori proyek
+cd ../Backend_Project
+
+# 2. Setup environment variabel
+# Buat file .env secara manual
+# Edit file .env dan isi:
+# PORT=3000
+# NODE_ENV=development
+# DB_HOST=localhost
+# DB_PORT=3306
+# DB_USER=root
+# DB_PASSWORD=
+# DB_NAME=deepshield_db
+# JWT_SECRET=<JWT_SECRET>
+# JWT_EXPIRES_IN=24h
+# AI_SERVER_URL=<API_MODEL_AI>
+
+# 3. Jalankan perintah berikut
+npm install        # instalasi
+npm run db:init    # buat database + tabel + user demo
+npm run dev        # jalankan server
+```
+
+### 4. Konfigurasi Model AI
+
+```bash
+# 1. Pindah ke direktori proyek
+cd ../AI_Project
+
+# 2. Setup virtual environment
+python3 -m venv venv        # Windows: py -m venv venv
+source venv/bin/activate    # Windows: venv\Scripts\activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Setup environment variabel
+# Buat file .env secara manual
+# Edit file .env dan isi:
+# GROQ_API_KEY=<API_KEY_DARI_console.groq.com>
+
+# 5. Run AI model server
+uvicorn main:app # default port: 8000
+# uvicorn main:app --reload (restart otomatis saat ada perubahan)
+# uvicorn main:app --host 127.0.0.1 --port 5000 (menentukan host dan port custom)
+
+# 6. Testing (opsional)
+# Akses API Documentation (Swagger UI)
+http://127.0.0.1:8000/docs # atau http://localhost:8000/docs
+```
