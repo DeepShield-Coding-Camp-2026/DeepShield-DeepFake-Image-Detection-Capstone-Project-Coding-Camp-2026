@@ -1,9 +1,19 @@
 # DeepShield
 
+![home](assets/home_page.png)
+
 ## Tentang Proyek
 **DeepShield** adalah aplikasi web berbasis AI yang dirancang untuk mendeteksi keaslian gambar wajah dan mengklasifikasikannya ke dalam dua kategori: **Real** atau **Fake**. Sistem mendukung unggahan gambar dalam format **JPG**, **PNG**, dan **WEBP**, serta menghasilkan informasi berupa **hasil prediksi**, **tingkat kepercayaan (confidence score)**, dan **penjelasan singkat** yang dihasilkan oleh model **Generative AI** untuk membantu pengguna memahami hasil analisis.
 
 Proyek ini dikembangkan sebagai bagian dari **Capstone Project Coding Camp Powered by DBS Foundation 2026**. DeepShield bertujuan untuk meningkatkan kewaspadaan terhadap potensi manipulasi gambar digital, sekaligus mendukung media, komunitas, dan layanan publik sebagai mekanisme verifikasi awal dalam menghadapi penyebaran informasi yang tidak valid di era digital.
+
+## Screenshot
+<p align="start">
+  <img src="assets/login.jpg" alt="DeepShield Home" height="500">&nbsp;&nbsp;
+  <img src="assets/detector.jpg" alt="DeepShield Home" height="500">&nbsp;&nbsp;
+  <img src="assets/result.jpg" alt="DeepShield Home" height="500">&nbsp;&nbsp;
+  <img src="assets/history.jpg" alt="DeepShield Home" height="500">&nbsp;&nbsp;
+</p>
 
 ## Fitur Utama
 - Login dan Register User
@@ -120,3 +130,12 @@ uvicorn main:app # default port: 8000
 # Akses API Documentation (Swagger UI)
 http://127.0.0.1:8000/docs # atau http://localhost:8000/docs
 ```
+
+## Kontributor
+Coding Camp Capstone Team	CC26-PSU284
+- CDCC011D6Y2148 - Peter Taniwan - Data Scientist
+- CDCC011D6Y1780 - Raymond Emmanuel Krista - Data Scientist
+- CACC011D6X0900 - Rahma Aulia Putri - AI Engineer
+- CACC299D6Y1743 - Crist Evan Lamhot Turnip - AI Engineer
+- CFCC525D6Y0177 - Samuel Rivaldo Saragih - Full Stack Web Developer
+- CFCC011D6X2041 - Mona Yola Lumban Raja - Full Stack Web Developer
