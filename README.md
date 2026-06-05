@@ -9,10 +9,10 @@ Proyek ini dikembangkan sebagai bagian dari **Capstone Project Coding Camp Power
 
 ## Screenshot
 <p align="start">
-  <img src="assets/login.jpg" alt="DeepShield Home" height="500">&nbsp;&nbsp;
-  <img src="assets/detector.jpg" alt="DeepShield Home" height="500">&nbsp;&nbsp;
-  <img src="assets/result.jpg" alt="DeepShield Home" height="500">&nbsp;&nbsp;
-  <img src="assets/history.jpg" alt="DeepShield Home" height="500">&nbsp;&nbsp;
+  <img src="assets/login.jpg" alt="DeepShield Home" height="400">&nbsp;&nbsp;
+  <img src="assets/detector.jpg" alt="DeepShield Home" height="400">&nbsp;&nbsp;
+  <img src="assets/result.jpg" alt="DeepShield Home" height="400">&nbsp;&nbsp;
+  <img src="assets/history.jpg" alt="DeepShield Home" height="400">&nbsp;&nbsp;
 </p>
 
 ## Fitur Utama
