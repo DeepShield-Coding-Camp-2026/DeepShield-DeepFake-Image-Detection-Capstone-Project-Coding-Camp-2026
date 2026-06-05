@@ -1,0 +1,10 @@
+metric,value
+dataset_year,2020-2026
+total_images,371076
+fake_images,194094
+real_images,176982
+fake_percentage,52.30572712867445
+real_percentage,47.69427287132555
+absolute_difference,17112
+absolute_difference_percentage,4.611454257348899
+majority_to_minority_ratio,1.0966877987591959
