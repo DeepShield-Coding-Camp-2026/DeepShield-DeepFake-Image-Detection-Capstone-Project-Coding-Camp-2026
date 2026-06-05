@@ -2,7 +2,7 @@
 
 > **Sumber dataset:** [Kaggle — Deepfake and Real Images (Manjil Karki)](https://www.kaggle.com/datasets/manjilkarki/deepfake-and-real-images) + 4 dataset tambahan pada referesni  
 > **Dataset asli:** OpenForensics (ICCV 2021) — Le et al.  
-> **Output Data Wrangling:** `clean_data_sorted.csv` + `deepfake_clean_final.zip`
+> **Output Data Wrangling:** [Kaggle - Deepfake Clean Final](https://www.kaggle.com/datasets/remonggkircop/deepfake-clean-final/)
 
 ---
 
