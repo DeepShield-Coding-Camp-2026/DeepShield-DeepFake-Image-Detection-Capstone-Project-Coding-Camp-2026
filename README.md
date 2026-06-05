@@ -1,144 +1,319 @@
 # DeepShield
 
-![home](assets/home_page.png)
-
-## Tentang Proyek
-**DeepShield** adalah aplikasi web berbasis AI yang dirancang untuk mendeteksi keaslian gambar wajah dan mengklasifikasikannya ke dalam dua kategori: **Real** atau **Fake**. Sistem mendukung unggahan gambar dalam format **JPG**, **PNG**, dan **WEBP**, serta menghasilkan informasi berupa **hasil prediksi**, **tingkat kepercayaan (confidence score)**, dan **penjelasan singkat** yang dihasilkan oleh model **Generative AI** untuk membantu pengguna memahami hasil analisis.
-
-Proyek ini dikembangkan sebagai bagian dari **Capstone Project Coding Camp Powered by DBS Foundation 2026**. DeepShield bertujuan untuk meningkatkan kewaspadaan terhadap potensi manipulasi gambar digital, sekaligus mendukung media, komunitas, dan layanan publik sebagai mekanisme verifikasi awal dalam menghadapi penyebaran informasi yang tidak valid di era digital.
-
-## Screenshot
-<p align="start">
-  <img src="assets/login.jpg" alt="DeepShield Home" height="400">&nbsp;&nbsp;
-  <img src="assets/detector.jpg" alt="DeepShield Home" height="400">&nbsp;&nbsp;
-  <img src="assets/result.jpg" alt="DeepShield Home" height="400">&nbsp;&nbsp;
-  <img src="assets/history.jpg" alt="DeepShield Home" height="400">&nbsp;&nbsp;
+<p align="center">
+  <img src="assets/home_page.png" alt="DeepShield Home Page" width="1000">
 </p>
 
+<p align="center">
+  <strong>Platform Deteksi Deepfake Berbasis AI</strong>
+</p>
+
+<p align="center">
+  Mendeteksi keaslian gambar wajah menggunakan teknologi Deep Learning.
+</p>
+
+---
+
+## Daftar Isi
+
+* [Tentang Proyek](#tentang-proyek)
+* [Fitur Utama](#fitur-utama)
+* [Tangkapan Layar](#tangkapan-layar)
+* [Teknologi yang Digunakan](#teknologi-yang-digunakan)
+* [Arsitektur Sistem](#arsitektur-sistem)
+* [Performa Model AI](#performa-model-ai)
+* [Panduan Instalasi](#panduan-instalasi)
+* [Model AI](#model-ai)
+* [Kontributor](#kontributor)
+* [Lisensi](#lisensi)
+
+---
+
+## Tentang Proyek
+
+**DeepShield** adalah aplikasi web berbasis kecerdasan buatan (Artificial Intelligence) yang dirancang untuk mendeteksi keaslian gambar wajah dan mengklasifikasikannya ke dalam dua kategori, yaitu **Real** dan **Fake (Deepfake)**.
+
+Sistem mendukung unggahan gambar dalam format **JPG**, **PNG**, dan **WEBP**, serta memberikan informasi berupa:
+
+* Hasil klasifikasi gambar
+* Nilai confidence score
+* Penjelasan hasil deteksi menggunakan Generative AI
+* Riwayat hasil pemindaian
+* Laporan hasil deteksi dalam format PDF
+
+Proyek ini dikembangkan sebagai bagian dari **Capstone Project Coding Camp Powered by DBS Foundation 2026**.
+
+DeepShield bertujuan untuk meningkatkan kewaspadaan terhadap manipulasi gambar digital sekaligus membantu proses verifikasi awal terhadap konten visual yang berpotensi menyesatkan di era digital.
+
+---
+
 ## Fitur Utama
-- Login dan Register User
-- Upload Gambar Wajah
-- Deteksi Deepfake Berbasis AI
-- Riwayat Hasil Scan
-- Download Laporan PDF
-- JWT Authentication
-- RESTful API
 
-## Tech Stack
-Frontend:
-- React.js
-- Vite
-- React Router DOM
-- CSS3
+* Registrasi dan Login Pengguna
+* Autentikasi Menggunakan JWT
+* Unggah Gambar Wajah
+* Deteksi Deepfake Berbasis Deep Learning
+* Prediksi Confidence Score
+* Penjelasan Hasil Menggunakan Generative AI
+* Riwayat Hasil Deteksi
+* Unduh Laporan PDF
+* Integrasi REST API
 
-Backend:
-- Node.js
-- Express.js
-- JWT Authentication
-- Multer
-- MySQL
+---
 
-AI:
-- FastAPI
-- TensorFlow/Keras
-- Groq API
-- Uvicorn
+## Tangkapan Layar
 
-## Cara Menjalankan Proyek
+<table>
+<tr>
+<td align="center">
+<img src="assets/login.jpg" height="350"><br>
+<b>Halaman Login</b>
+</td>
+
+<td align="center">
+<img src="assets/detector.jpg" height="350"><br>
+<b>Halaman Deteksi</b>
+</td>
+
+<td align="center">
+<img src="assets/result.jpg" height="350"><br>
+<b>Hasil Deteksi</b>
+</td>
+
+<td align="center">
+<img src="assets/history.jpg" height="350"><br>
+<b>Riwayat Deteksi</b>
+</td>
+</tr>
+</table>
+
+---
+
+## Teknologi yang Digunakan
+
+| Komponen      | Teknologi                              |
+| ------------- | -------------------------------------- |
+| Frontend      | React.js, Vite, React Router DOM, CSS3 |
+| Backend       | Node.js, Express.js                    |
+| Database      | MySQL                                  |
+| Autentikasi   | JWT Authentication                     |
+| Layanan AI    | FastAPI, TensorFlow/Keras              |
+| Generative AI | Groq API                               |
+| Web Server AI | Uvicorn                                |
+
+---
+
+## Arsitektur Sistem
+
+```
+┌─────────┐
+│  User   │
+└────┬────┘
+     │
+     ▼
+┌─────────────────┐
+│ Frontend        │
+│ React + Vite    │
+└────┬────────────┘
+     │ HTTP Request
+     ▼
+┌─────────────────┐
+│ Backend         │
+│ Express.js      │
+└────┬───────┬────┘
+     │       │
+     │       └────────► MySQL Database
+     │
+     ▼
+┌─────────────────┐
+│ AI Service      │
+│ FastAPI         │
+└────┬────────────┘
+     │
+     ├────────► TensorFlow Model
+     │
+     └────────► Groq API
+```
+
+---
+
+## Performa Model AI
+
+| Metrik             | Nilai  |
+| ------------------ | ------ |
+| Accuracy | 89.83% |
+| Weighted Precision | 90.20% |
+| Weighted Recall | 89.83% |
+| Weighted F1-Score | 89.81% |
+
+### Confusion Matrix
+
+<img src="assets/confusion_matrix.png" height="250"><br>
+
+---
+
+## Panduan Instalasi
 
 ### Prasyarat
-- [git](https://git-scm.com/install/)
 
-Fullstack:
-- [npm](https://nodejs.org/en/download)
-- [MySQL](https://www.mysql.com/downloads/)
+#### Umum
 
-AI:
-- [Python](https://www.python.org/downloads/) 3.10+
-- API Key dari [Groq](https://console.groq.com) untuk generative AI
+* Git
 
-### 1. Clone Repositori
+#### Fullstack
+
+* Node.js
+* npm
+* MySQL
+
+#### Layanan AI
+
+* Python 3.10 atau lebih baru
+* API Key Groq
+
+---
+
+### 1. Clone Repository
 
 ```bash
 git clone https://github.com/PeterTaniwan/DeepShield-DeepFake-Image-Detection-Capstone-Project-Coding-Camp-2026.git
+
 cd DeepShield-DeepFake-Image-Detection-Capstone-Project-Coding-Camp-2026
 ```
 
-### 2. Konfigurasi Frontend
+---
+
+### 2. Menjalankan Frontend
 
 ```bash
-# 1. Pindah ke direktori proyek
-cd ../Frontend_Project
+cd Frontend_Project
 
-# 2. Instalasi
 npm install
 
-# 3. Jalankan server
 npm run dev
 ```
 
-### 3. Konfigurasi Backend
+Frontend akan berjalan pada:
 
-```bash
-# 1. Pindah ke direktori proyek
-cd ../Backend_Project
-
-# 2. Setup environment variabel
-# Buat file .env secara manual
-# Edit file .env dan isi:
-# PORT=3000
-# NODE_ENV=development
-# DB_HOST=localhost
-# DB_PORT=3306
-# DB_USER=root
-# DB_PASSWORD=
-# DB_NAME=deepshield_db
-# JWT_SECRET=<JWT_SECRET>
-# JWT_EXPIRES_IN=24h
-# AI_SERVER_URL=<API_MODEL_AI>
-
-# 3. Jalankan perintah berikut
-npm install        # instalasi
-npm run db:init    # buat database + tabel + user demo
-npm run dev        # jalankan server
+```text
+http://localhost:5173
 ```
 
-### 4. Konfigurasi Model AI
+---
+
+### 3. Menjalankan Backend
+
+Buat file `.env`:
+
+```env
+PORT=3000
+NODE_ENV=development
+
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=deepshield_db
+
+JWT_SECRET=your_secret_key
+JWT_EXPIRES_IN=24h
+
+AI_SERVER_URL=http://localhost:8000
+```
+
+Install dependency dan inisialisasi database:
 
 ```bash
-# 1. Pindah ke direktori proyek
-cd ../AI_Project
+cd Backend_Project
 
-# 2. Setup virtual environment
-python3 -m venv venv        # Windows: py -m venv venv
-source venv/bin/activate    # Windows: venv\Scripts\activate
+npm install
 
-# 3. Install dependencies
+npm run db:init
+
+npm run dev
+```
+
+Backend akan berjalan pada:
+
+```text
+http://localhost:3000
+```
+
+---
+
+### 4. Menjalankan Layanan AI
+
+Buat virtual environment:
+
+```bash
+cd AI_Project
+
+python -m venv venv
+```
+
+Aktivasi virtual environment:
+
+Linux / macOS
+
+```bash
+source venv/bin/activate
+```
+
+Windows
+
+```bash
+venv\Scripts\activate
+```
+
+Install dependency:
+
+```bash
 pip install -r requirements.txt
-
-# 4. Setup environment variabel
-# Buat file .env secara manual
-# Edit file .env dan isi:
-# GROQ_API_KEY=<API_KEY_DARI_console.groq.com>
-
-# 5. Run AI model server
-uvicorn main:app # default port: 8000
-# uvicorn main:app --reload (restart otomatis saat ada perubahan)
-# uvicorn main:app --host 127.0.0.1 --port 5000 (menentukan host dan port custom)
-
-# 6. Testing (opsional)
-# Akses API Documentation (Swagger UI)
-http://127.0.0.1:8000/docs # atau http://localhost:8000/docs
 ```
+
+Buat file `.env`:
+
+```env
+GROQ_API_KEY=your_groq_api_key
+```
+
+Jalankan server AI:
+
+```bash
+uvicorn main:app --reload
+```
+
+Dokumentasi API (Swagger):
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+---
 
 ## Model AI
-Berikut ini link akses model AI DeepShield: [Klik Disini](https://drive.google.com/drive/folders/1YA2MoSPg-_4BGVoz4xXGEhNz4qMhMn_K?usp=sharing)
+
+Model AI yang digunakan pada proyek ini dapat diakses melalui tautan berikut:
+
+[Klik disini](https://drive.google.com/drive/folders/1YA2MoSPg-_4BGVoz4xXGEhNz4qMhMn_K)
+
+---
 
 ## Kontributor
-Coding Camp Capstone Team	CC26-PSU284
-- CDCC011D6Y2148 - Peter Taniwan - Data Scientist
-- CDCC011D6Y1780 - Raymond Emmanuel Krista - Data Scientist
-- CACC011D6X0900 - Rahma Aulia Putri - AI Engineer
-- CACC299D6Y1743 - Crist Evan Lamhot Turnip - AI Engineer
-- CFCC525D6Y0177 - Samuel Rivaldo Saragih - Full Stack Web Developer
-- CFCC011D6X2041 - Mona Yola Lumban Raja - Full Stack Web Developer
+
+### Tim Capstone Coding Camp 2026 — CC26-PSU284
+
+| ID Peserta     | Nama                     | Peran                    |
+| -------------- | ------------------------ | ------------------------ |
+| CDCC011D6Y2148 | Peter Taniwan            | Data Scientist           |
+| CDCC011D6Y1780 | Raymond Emmanuel Krista  | Data Scientist           |
+| CACC011D6X0900 | Rahma Aulia Putri        | AI Engineer              |
+| CACC299D6Y1743 | Crist Evan Lamhot Turnip | AI Engineer              |
+| CFCC525D6Y0177 | Samuel Rivaldo Saragih   | Full Stack Web Developer |
+| CFCC011D6X2041 | Mona Yola Lumban Raja    | Full Stack Web Developer |
+
+---
+
+## Lisensi
+
+Proyek ini dikembangkan untuk keperluan pendidikan dan penelitian sebagai bagian dari Capstone Project Coding Camp Powered by DBS Foundation 2026.
