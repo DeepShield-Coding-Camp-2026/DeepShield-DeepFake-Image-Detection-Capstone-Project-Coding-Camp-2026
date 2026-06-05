@@ -131,6 +131,9 @@ uvicorn main:app # default port: 8000
 http://127.0.0.1:8000/docs # atau http://localhost:8000/docs
 ```
 
+## Model AI
+Berikut ini link akses model AI DeepShield: [Klik Disini](https://drive.google.com/drive/folders/1YA2MoSPg-_4BGVoz4xXGEhNz4qMhMn_K?usp=sharing)
+
 ## Kontributor
 Coding Camp Capstone Team	CC26-PSU284
 - CDCC011D6Y2148 - Peter Taniwan - Data Scientist
